@@ -1,8 +1,8 @@
 # Projet API - GraphQL
 
-Ce projet a été réalisé par Eloi PELOUX, étudiant en Master 2 à WebTech Bordeaux.
+Ce projet a été réalisé par Eloi PELOUX, étudiant en Master 2 à WebTech Bordeaux. Il a été découpé en module par fonctionnalité, soit un resolver pour les *Users* et un pour les *Products*.
 
-Les langages utilisés sont le GraphQL, Node, avec un serveur Express (apollo). 
+Les langages utilisés sont le GraphQL, Node, avec un serveur Express (apollo).
 
 ## Initialisation
 
@@ -26,85 +26,104 @@ Il est possible de faire les manipulations classiques d'un CRUD.
 
 ### Users
 
-Visualiser l'ensemble des utilisateurs `{ users
-{
-  firstName,
-  lastName,
-  role
+Visualiser l'ensemble des utilisateurs 
+```
+{ users
+  {
+    firstName,
+    lastName,
+    role
+  }
 }
-}`
+```
 
 Créer un nouveau utilisateur
-> `mutation{
-        createUser(firstName: "Eloi", lastName: "Peloux", role: "Développeur"){
-            userToken,
-            firstName,
-            lastName,
-            role,
-            created_at,
-        }
-    }`
+```
+mutation {
+  createUser(firstName: "Eloi", lastName: "Peloux", role: "Développeur"){
+    userToken,
+    firstName,
+    lastName,
+    role,
+    created_at,
+  }
+}
+```
     
 Éditer un utilisateur (vous pouvez update l'ensemble des champs excepté l'id, le token et les dates)
-> `mutation{
-        updateUser(id: "123", firstName: "Eloi updated", lastName: "Peloux", role: "Développeur"){
-            userToken,
-            firstName,
-            lastName,
-            role,
-            updated_at,
-        }
-    }`
+```
+mutation {
+  updateUser(id: "123", firstName: "Eloi updated", lastName: "Peloux", role: "Développeur"){
+    userToken,
+    firstName,
+    lastName,
+    role,
+    updated_at,
+  }
+}
+```
     
 Supprimer un utilisateur
-> `mutation{
-        deleteUser(id: "123"){
-            firstName,
-            lastName,
-            role
-        }
- }`
+```
+mutation {
+  deleteUser(id: "123"){
+    firstName,
+    lastName,
+    role
+  }
+}
+```
 
 ### Products
 
 Visualiser l'ensemble des produits
-> `{ products
-{
-  name,
-  description,
-  prix,
-  reference
+
+>
+```
+{ products
+  {
+    name,
+    description,
+    prix,
+    reference
+  }
 }
-}`
+```
 
 Créer un nouveau produit
-> `mutation{
-        createProduct(name: "monProduit", description: "Mon nouveau produit", reference: "ABC123", prix: 12, stock: 1){
-            productToken,
-            name,
-            description,
-            reference,
-            prix,
-            stock
-        }
-    }`
+```
+mutation {
+  createProduct(name: "monProduit", description: "Mon nouveau produit", reference: "ABC123", prix: 12, stock: 1){
+    productToken,
+    name,
+    description,
+    reference,
+    prix,
+    stock
+  }
+}
+```
     
 Éditer un produit (vous pouvez update l'ensemble des champs excepté l'id, le token et les dates)
-> `mutation{
-        updateProduct(id:"123", name: "monProduitUpdate", prix: 45){
-            productToken,
-            name,
-            description,
-            reference,
-            prix,
-        }
-    }`
+```
+mutation {
+  updateProduct(id:"123", name: "monProduitUpdate", prix: 45){
+    productToken,
+    name,
+    description,
+    reference,
+    prix
+  }
+}
+```
 
 Supprimer un produit
-> `mutation{
-        deleteProduct(id: "123"){
-            name,
-            description,
-            reference
-        }
- }`
+```
+mutation {
+  deleteProduct(id: "123"){
+    name,
+    description,
+    reference
+  }
+ }
+ ```
