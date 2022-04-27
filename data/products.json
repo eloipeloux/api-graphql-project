@@ -1,0 +1,24 @@
+[
+  {
+    "id": "rJM8m3Lr9",
+    "productToken": "6f050982-815a-4f8a-bde6-9292493eba6c",
+    "name": "Marteau",
+    "description": "Enfonce des clous",
+    "reference": "MART0",
+    "prix": 18,
+    "stock": 68,
+    "created_at": "27/04/2022, 14:12:58",
+    "updated_at": "27/04/2022, 14:15:05"
+  },
+  {
+    "id": "rJfcQhIS5",
+    "productToken": "01cf7297-ab12-4c23-9464-c5bfefd6eb87",
+    "name": "Tournevis",
+    "description": "Tourne des vis",
+    "reference": "TVIS0",
+    "prix": 14,
+    "stock": 57,
+    "created_at": "27/04/2022, 14:14:01",
+    "updated_at": "27/04/2022, 14:14:01"
+  }
+]
