@@ -27,7 +27,7 @@ Il est possible de faire les manipulations classiques d'un CRUD.
 ### Users
 
 Visualiser l'ensemble des utilisateurs 
-```
+``` graphQL
 { users
   {
     firstName,
@@ -38,7 +38,7 @@ Visualiser l'ensemble des utilisateurs
 ```
 
 Créer un nouveau utilisateur
-```
+``` graphQL
 mutation {
   createUser(firstName: "Eloi", lastName: "Peloux", role: "Développeur"){
     userToken,
@@ -51,7 +51,7 @@ mutation {
 ```
     
 Éditer un utilisateur (vous pouvez update l'ensemble des champs excepté l'id, le token et les dates)
-```
+``` graphQL
 mutation {
   updateUser(id: "123", firstName: "Eloi updated", lastName: "Peloux", role: "Développeur"){
     userToken,
@@ -64,7 +64,7 @@ mutation {
 ```
     
 Supprimer un utilisateur
-```
+``` graphQL
 mutation {
   deleteUser(id: "123"){
     firstName,
@@ -79,7 +79,7 @@ mutation {
 Visualiser l'ensemble des produits
 
 >
-```
+``` graphQL
 { products
   {
     name,
@@ -91,7 +91,7 @@ Visualiser l'ensemble des produits
 ```
 
 Créer un nouveau produit
-```
+``` graphQL
 mutation {
   createProduct(name: "monProduit", description: "Mon nouveau produit", reference: "ABC123", prix: 12, stock: 1){
     productToken,
@@ -105,7 +105,7 @@ mutation {
 ```
     
 Éditer un produit (vous pouvez update l'ensemble des champs excepté l'id, le token et les dates)
-```
+``` graphQL
 mutation {
   updateProduct(id:"123", name: "monProduitUpdate", prix: 45){
     productToken,
@@ -118,7 +118,7 @@ mutation {
 ```
 
 Supprimer un produit
-```
+``` graphQL
 mutation {
   deleteProduct(id: "123"){
     name,
